@@ -1,8 +1,24 @@
-tool.pytest.ini_options.pythonpath = ["."]
-tool.ruff.lint.select = ["E", "F", "I"]
-
 [project]
 name = "enrichment-service"
 version = "0.1.0"
 requires-python = ">=3.12,<3.13"
-dependencies = ["fastapi", "uvicorn", "aio-pika", "pydantic-settings", "sqlalchemy[asyncio]", "asyncpg", "alembic", "prometheus-client", "jsonschema", "pytest", "ruff"]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "aio-pika",
+    "pydantic-settings",
+    "sqlalchemy[asyncio]",
+    "asyncpg",
+    "alembic",
+    "prometheus-client",
+    "jsonschema",
+]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

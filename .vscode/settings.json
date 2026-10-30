@@ -1,0 +1,22 @@
+{
+  "cSpell.words": [
+    "aiopika",
+    "alembic",
+    "asyncio",
+    "asyncpg",
+    "fastapi",
+    "flyway",
+    "jsonschema",
+    "micrometer",
+    "mvnw",
+    "outbox",
+    "pydantic",
+    "pytest",
+    "pythonpath",
+    "sqlalchemy",
+    "testcontainers",
+    "uvicorn",
+    "venv",
+    "__pycache__"
+  ]
+}

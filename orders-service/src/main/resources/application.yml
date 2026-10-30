@@ -1,0 +1,5 @@
+spring.application.name: orders-service
+spring.datasource: { url: "jdbc:postgresql://postgres:5432/orders?currentSchema=orders", username: orders_svc, password: orders }
+spring.flyway.schemas: orders
+spring.rabbitmq.host: rabbitmq
+management.endpoints.web.exposure.include: health,prometheus

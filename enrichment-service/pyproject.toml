@@ -1,0 +1,5 @@
+tool.pytest.ini_options.pythonpath = ["."]
+[project]
+name = "enrichment-service"
+version = "0.1.0"
+dependencies = ["fastapi", "uvicorn", "aio-pika", "pydantic-settings", "sqlalchemy[asyncio]", "asyncpg", "alembic", "prometheus-client", "jsonschema", "pytest", "ruff"]

@@ -1,0 +1,31 @@
+name: enrichment-service
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "enrichment-service/**"
+      - "contracts/**"
+      - ".github/workflows/enrichment-service.yml"
+  pull_request:
+    paths:
+      - "enrichment-service/**"
+      - "contracts/**"
+      - ".github/workflows/enrichment-service.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      UV_PYTHON: "3.12"
+    defaults:
+      run:
+        working-directory: enrichment-service
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync
+      - run: uv run ruff check .
+      - run: uv run pytest -q

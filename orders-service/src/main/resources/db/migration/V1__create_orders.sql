@@ -1,0 +1,4 @@
+CREATE TABLE orders.orders (
+  id UUID PRIMARY KEY, customer_id TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'CREATED', version BIGINT NOT NULL DEFAULT 0
+);

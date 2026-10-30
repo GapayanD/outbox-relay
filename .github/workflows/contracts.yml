@@ -1,0 +1,25 @@
+name: contracts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "contracts/**"
+      - ".github/workflows/contracts.yml"
+  pull_request:
+    paths:
+      - "contracts/**"
+      - ".github/workflows/contracts.yml"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Lint OpenAPI
+        run: npx --yes @redocly/cli@1 lint --extends minimal contracts/openapi/orders-api.yaml
+      - name: Compile event JSON Schemas
+        run: npx --yes ajv-cli@5 compile --spec=draft2020 -s "contracts/events/*.json"

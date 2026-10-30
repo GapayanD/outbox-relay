@@ -1,0 +1,2 @@
+#!/bin/sh
+exec mvn "$@"   # shim; replace with the real wrapper via: mvn wrapper:wrapper

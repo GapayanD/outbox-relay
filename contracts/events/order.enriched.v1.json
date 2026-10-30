@@ -1,0 +1,3 @@
+{"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "order.enriched.v1", "type": "object",
+ "required": ["order_id", "fraud_score"],
+ "properties": {"order_id": {"type": "string"}, "fraud_score": {"type": "number"}}}

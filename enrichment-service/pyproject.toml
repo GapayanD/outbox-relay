@@ -1,4 +1,5 @@
 tool.pytest.ini_options.pythonpath = ["."]
+tool.ruff.lint.select = ["E", "F", "I"]
 [project]
 name = "enrichment-service"
 version = "0.1.0"

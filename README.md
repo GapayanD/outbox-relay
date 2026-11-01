@@ -62,7 +62,7 @@ Rejected or failed messages are dead-lettered through `orders.dlx` into `orders.
 | Area | Choice |
 |---|---|
 | Orders service | Java 25, Spring Boot 4.1, Spring Data JPA, Spring Security, Spring AMQP, Flyway |
-| Enrichment service | Python 3.12, FastAPI, aio-pika, SQLAlchemy 2.0 (async), Alembic, Pydantic v2 |
+| Enrichment service | Python 3.12, FastAPI, aio-pika, SQLalchemy 2.0 (async), Alembic, Pydantic v2 |
 | Infrastructure | PostgreSQL 16, RabbitMQ 3.13, Redis 7 |
 | Observability | Micrometer + Prometheus, `prometheus-client`, Grafana |
 | Testing | JUnit 5, Testcontainers, pytest |

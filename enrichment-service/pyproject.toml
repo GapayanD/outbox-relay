@@ -11,11 +11,10 @@ dependencies = [
     "asyncpg",
     "alembic",
     "prometheus-client",
-    "jsonschema",
 ]
 
 [dependency-groups]
-dev = ["pytest", "pytest-asyncio", "httpx", "ruff"]
+dev = ["pytest", "pytest-asyncio", "httpx", "ruff", "jsonschema"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
